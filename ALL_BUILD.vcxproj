@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{ACB6436B-8D5F-3A20-8EC9-8BF41D4423D5}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\goflyair\Downloads\Compressed\opencv\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\goflyair\Downloads\Compressed\opencv\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\goflyair\Downloads\Compressed\opencv\opencv\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/goflyair/Downloads/Compressed/opencv/opencv/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/goflyair/Downloads/Compressed/opencv/opencv -BC:/Users/goflyair/Downloads/Compressed/opencv/build --check-stamp-file C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/goflyair/Downloads/Compressed/opencv/opencv/CMakeLists.txt;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\CMakeLists.txt;C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\3.6.20160616-g85bdd\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\3.6.20160616-g85bdd\CMakeCXXCompiler.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\3.6.20160616-g85bdd\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\3.6.20160616-g85bdd\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVUtils.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectCXXCompiler.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVLegacyOptions.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVVersion.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\modules\core\include\opencv2\core\version.hpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVCompilerOptions.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVCRTLinkage.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\checks\winrttest.cpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVPCHSupport.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVModule.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\TestBigEndian.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLibsGrfmt.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLibsGUI.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\checks\win32uitest.cpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLibsVideo.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\checks\vfwtest.cpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\3rdparty\ffmpeg\ffmpeg_version.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLibsPerf.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectCUDA.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLATEX.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectPython.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPythonInterp.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPythonLibs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeFindFrameworks.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectApacheAnt.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindJNI.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeFindJavaCommon.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectOpenCL.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\checks\opencl.cpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectVTK.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVExtraTargets.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\cmake_uninstall.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenHeaders.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\cvconfig.h.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\opencv_modules.hpp.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenPkgconfig.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\opencv-XXX.pc.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenAndroidMK.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenConfig.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig-version.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig-version.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig-version.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenInfoPlist.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVPackaging.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.6\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Templates\CPackConfig.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/goflyair/Downloads/Compressed/opencv/opencv/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/goflyair/Downloads/Compressed/opencv/opencv -BC:/Users/goflyair/Downloads/Compressed/opencv/build --check-stamp-file C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/goflyair/Downloads/Compressed/opencv/opencv/CMakeLists.txt;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\CMakeLists.txt;C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\3.6.20160616-g85bdd\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\3.6.20160616-g85bdd\CMakeCXXCompiler.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\3.6.20160616-g85bdd\CMakeCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\3.6.20160616-g85bdd\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVUtils.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectCXXCompiler.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVLegacyOptions.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVVersion.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\modules\core\include\opencv2\core\version.hpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVCompilerOptions.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVCRTLinkage.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\checks\winrttest.cpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVPCHSupport.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVModule.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\TestBigEndian.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLibsGrfmt.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLibsGUI.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\checks\win32uitest.cpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLibsVideo.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\checks\vfwtest.cpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\3rdparty\ffmpeg\ffmpeg_version.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLibsPerf.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectCUDA.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVFindLATEX.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectPython.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPythonInterp.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPythonLibs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeFindFrameworks.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectApacheAnt.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindJNI.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeFindJavaCommon.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CMakeParseArguments.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectOpenCL.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\checks\opencl.cpp;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVDetectVTK.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVExtraTargets.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\cmake_uninstall.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenHeaders.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\cvconfig.h.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\opencv_modules.hpp.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenPkgconfig.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\opencv-XXX.pc.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenAndroidMK.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenConfig.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig-version.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig-version.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\templates\OpenCVConfig-version.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVGenInfoPlist.cmake;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\cmake\OpenCVPackaging.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.6\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.6\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.6\Templates\CPackConfig.cmake.in;C:\Users\goflyair\Downloads\Compressed\opencv\opencv\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\goflyair\Downloads\Compressed\opencv\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/ZERO_CHECK.vcxproj">
+      <Project>E5261EF6-9CAA-3A61-BEC1-A3B88C9614AF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/3rdparty/openexr/IlmImf.vcxproj">
+      <Project>2EA26F25-08B5-39F5-9114-B3B2AC82A70C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/3rdparty/libjasper/libjasper.vcxproj">
+      <Project>DDE662E4-7E37-3F5F-A321-D9D9E0DB368B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/3rdparty/libjpeg/libjpeg.vcxproj">
+      <Project>EA2EE1F5-A812-37AB-9940-27E773D60BFD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/3rdparty/libpng/libpng.vcxproj">
+      <Project>16ED47F2-2789-370C-8602-5D80577B67F8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/3rdparty/libtiff/libtiff.vcxproj">
+      <Project>D7991FAF-1C67-34F2-B921-077F7C468434</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/apps/annotation/opencv_annotation.vcxproj">
+      <Project>49AD0B8E-C29A-3F3E-AD2F-A9ED452C13CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/calib3d/opencv_calib3d.vcxproj">
+      <Project>09D25C68-7767-3D20-A15C-B571C727C840</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/contrib/opencv_contrib.vcxproj">
+      <Project>18A51E1B-BCD3-3A1A-A497-26C6E0E86A32</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/core/opencv_core.vcxproj">
+      <Project>EE157A8E-C3C8-3086-B1BA-94E20009BEBD</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/apps/haartraining/opencv_createsamples.vcxproj">
+      <Project>2F99EA5A-E0F7-3FB5-A325-1C116C9C9060</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/features2d/opencv_features2d.vcxproj">
+      <Project>00E1FBCF-3FB3-3226-8E78-04B0FD341C4D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/flann/opencv_flann.vcxproj">
+      <Project>8B743649-74A8-351F-A341-1A41C0C72C9B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/gpu/opencv_gpu.vcxproj">
+      <Project>20A97883-BCB2-366F-81CB-AD88785F97BC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/apps/haartraining/opencv_haartraining.vcxproj">
+      <Project>A29CAB8F-E48C-32FB-9F08-B9E8FD274194</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/apps/haartraining/opencv_haartraining_engine.vcxproj">
+      <Project>004C25C4-71C1-3059-9651-280EDE620467</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/highgui/opencv_highgui.vcxproj">
+      <Project>8B9F5D0D-BC42-349C-9262-6D1509B63D59</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/imgproc/opencv_imgproc.vcxproj">
+      <Project>9B87E22C-EF96-3C21-AEB5-91C3984E69E1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/legacy/opencv_legacy.vcxproj">
+      <Project>14570D5F-DFDC-30D3-AF0E-3FBB8BD150A0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/ml/opencv_ml.vcxproj">
+      <Project>0542C1B4-7986-3249-A50A-3321032B3EAA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/nonfree/opencv_nonfree.vcxproj">
+      <Project>73A6F41C-8D3A-39EB-9D21-B23CED4080C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/objdetect/opencv_objdetect.vcxproj">
+      <Project>F6076D0E-3280-3755-93E3-1FB87B6CDB83</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/ocl/opencv_ocl.vcxproj">
+      <Project>77FAF9A8-4D8B-36DD-9527-49DA40A3DA7A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/calib3d/opencv_perf_calib3d.vcxproj">
+      <Project>D5016CF3-6B4F-3173-8F65-337207BE67C2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/core/opencv_perf_core.vcxproj">
+      <Project>07F6AEC0-4D5C-30DC-969C-0E8AD6D54706</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/features2d/opencv_perf_features2d.vcxproj">
+      <Project>83DA1691-580A-3D6D-9685-AA038C92B448</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/gpu/opencv_perf_gpu.vcxproj">
+      <Project>5FE15485-1038-3E53-9484-1A29E9A072A0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/highgui/opencv_perf_highgui.vcxproj">
+      <Project>F0392A84-F83D-329E-9A31-2985EF7973B9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/imgproc/opencv_perf_imgproc.vcxproj">
+      <Project>A717C20D-FD9A-3AFD-9043-68387FE421C1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/nonfree/opencv_perf_nonfree.vcxproj">
+      <Project>300693DF-D52A-327B-9AFC-F47C74F9F3C2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/objdetect/opencv_perf_objdetect.vcxproj">
+      <Project>BF81AE6F-8EAC-3368-BE0B-64CBFB2CF9FA</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/ocl/opencv_perf_ocl.vcxproj">
+      <Project>12AC5422-F172-3495-9860-2C66AEF93344</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/photo/opencv_perf_photo.vcxproj">
+      <Project>EB75DE0F-8BDB-33B0-BFC7-4193E970FC2C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/stitching/opencv_perf_stitching.vcxproj">
+      <Project>71D174AB-9214-3235-8531-3DC2855BF872</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/superres/opencv_perf_superres.vcxproj">
+      <Project>B68E140D-A679-3336-A226-4493053D2EEC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/video/opencv_perf_video.vcxproj">
+      <Project>29415ACA-B64D-3689-A8F7-9EEFD17CAA76</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/apps/haartraining/opencv_performance.vcxproj">
+      <Project>F4C222BF-74F3-3540-B255-172EB5564358</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/photo/opencv_photo.vcxproj">
+      <Project>A7647E16-D031-3A92-8AEC-C853269F267E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/python/opencv_python.vcxproj">
+      <Project>8A621FAC-7585-3099-A379-18390911ACA0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/stitching/opencv_stitching.vcxproj">
+      <Project>8D0FBEB0-9EAF-3C93-9446-430D5E11975C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/superres/opencv_superres.vcxproj">
+      <Project>3AF9547E-06C0-3138-A34C-1BBB1C35AE36</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/calib3d/opencv_test_calib3d.vcxproj">
+      <Project>62FCA320-737E-368D-8606-151D2CCBC698</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/contrib/opencv_test_contrib.vcxproj">
+      <Project>490FBD35-A68E-3F68-99CB-1CBC914833E1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/core/opencv_test_core.vcxproj">
+      <Project>DC286E01-BB21-3EC9-9B94-0432CAB5106E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/features2d/opencv_test_features2d.vcxproj">
+      <Project>70A4D29E-DB2C-3146-A66E-B316C084BC82</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/flann/opencv_test_flann.vcxproj">
+      <Project>CF99A7E5-2934-3D5B-B469-3408B99C82CF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/gpu/opencv_test_gpu.vcxproj">
+      <Project>AD7AFE06-AA84-357D-B70A-3D97D7158E13</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/highgui/opencv_test_highgui.vcxproj">
+      <Project>7750BB37-FEDB-37E4-B19F-26D6173CB1B8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/imgproc/opencv_test_imgproc.vcxproj">
+      <Project>1B84D656-379A-3E98-9956-817F40038B28</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/legacy/opencv_test_legacy.vcxproj">
+      <Project>DC91CE29-41C4-3631-BB87-8FC72F9AF519</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/ml/opencv_test_ml.vcxproj">
+      <Project>169AC830-86AC-3149-B320-E0EBFE452965</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/nonfree/opencv_test_nonfree.vcxproj">
+      <Project>F6D313A2-D6DF-3F38-A070-37E73B05EF8F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/objdetect/opencv_test_objdetect.vcxproj">
+      <Project>59F56B6B-4515-34F5-A3B6-8DE222961991</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/ocl/opencv_test_ocl.vcxproj">
+      <Project>3A583079-CC45-31B1-80F6-3AA8825A03AB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/photo/opencv_test_photo.vcxproj">
+      <Project>54F7706E-FA45-3FEC-98D7-70D300C337DF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/stitching/opencv_test_stitching.vcxproj">
+      <Project>2A2A8110-0A7A-3923-A582-F5C25EEB6216</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/superres/opencv_test_superres.vcxproj">
+      <Project>1CE3A0C9-4A8C-3C82-A88E-08111589DAC9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/video/opencv_test_video.vcxproj">
+      <Project>8F357B58-3A84-3312-8ED3-A26970D07070</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/apps/traincascade/opencv_traincascade.vcxproj">
+      <Project>2F0C4348-ED1A-31CA-9920-57379A5A664F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/ts/opencv_ts.vcxproj">
+      <Project>5B0A08B4-00F5-35BC-A34C-8C3B5111DF8D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/video/opencv_video.vcxproj">
+      <Project>E7AEB046-D1EA-3305-A943-3BF0FA081CA1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/modules/videostab/opencv_videostab.vcxproj">
+      <Project>7CB50856-1843-3DCC-A031-5E390BA08BD0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/apps/visualisation/opencv_visualisation.vcxproj">
+      <Project>17BCF58C-8930-303F-91E9-E682B2FBA639</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/goflyair/Downloads/Compressed/opencv/build/3rdparty/zlib/zlib.vcxproj">
+      <Project>22276A6F-96B1-38CE-BDBB-F6A3E4D94E4A</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
